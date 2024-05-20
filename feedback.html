@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>feedback</title>
+    <style type="text/css">
+        * {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: grey;
+            font-family: Calibri;
+            padding: 10px 20px;
+        }
+        .navdiv {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo a {
+            font-size: 33px;
+            font-weight: 600;
+            color: aliceblue;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        li {
+            margin-right: 25px;
+        }
+        li:last-child {
+            margin-right: 0;
+        }
+        li a {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            background-color: black;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            width: 90px;
+        }
+        button a {
+            color: whitesmoke;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .image-wrapper {
+            margin: 0 10px;
+        }
+        .image-wrapper img {
+            width: 300px;
+        }
+        footer {
+            margin-top: auto;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .socialIcons a {
+            color: white;
+            margin: 0 5px;
+        }
+        .footerBottom {
+            margin-top: 10px;
+            color: #999;
+        }
+        .designer {
+            color: #f0f;
+            font-weight: bold;
+        }
+        .feedback-form {
+            max-width: 500px; 
+            margin: 30px auto;
+            padding: 20px;
+            border: 1px solid #ddd; 
+            border-radius: 5px; 
+        }
+        .success-message {
+            color: green; 
+            margin-top: 10px; 
+            display: none; 
+        } 
+
+    </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+   <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">YEAR ONE WMD</a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+
+            </ul> 
+            
+            <div class="search">
+                <form>
+                    <input type="text" placeholder="Search...">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+   </nav>
+
+   <main>
+    <div class="container">
+      <section class="feedback-form">
+        <h1>Share Your Feedback</h1> 
+        <form id="feedback-form">
+          <fieldset>
+            <legend>Your Information</legend> 
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required> 
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+          </fieldset>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div id="success-message" class="success-message"></div> 
+        </form>
+      </section>
+    </div>
+  </main>   
+
+  <script>
+    // Add event listener to the form
+    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the form from submitting
+  
+      // Get the form values
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+  
+      // Perform client-side validation
+      if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Please fill in all the required fields.');
+        return;
+      }
+  
+      // You can add additional logic here to handle the form submission, such as:
+      // - Sending the form data to a server using AJAX
+      // - Displaying a success message to the user
+      // - Resetting the form fields
+  
+      alert('Thank you for your feedback!');
+      document.getElementById('feedback-form').reset();
+    });
+    </script>
+
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://web.facebook.com/?_rdc=2&_rdr"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                <a href="https://support.google.com/answer/2451065?hl=en"><i class="fab fa-google-plus"></i></a>
+                <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2024; Designed by <span class="designer">Tshoganetso Jonathan</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+</body>
+</html>
